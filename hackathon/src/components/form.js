@@ -44,8 +44,8 @@ const NameForm = () => {
 
     for (let i = 0; i < split.length; i++) {
         let itemString = split[i]
-        const res = await fetch(
-            `https://www.googleapis.com/customsearch/v1?key=AIzaSyCbjpfGKScSURcaUJPe_ud6drieZFKBbPo&cx=f0aec48937b8f4a5a&q=${itemString}`
+        const res = await fetch( 
+            `https://www.googleapis.com/customsearch/v1?key=AIzaSyDIFxMHr-uy0hBRehEWZPdcNFq2pyYvpeA&cx=f0aec48937b8f4a5a&q=${itemString}`
           );
           const json = await res.json();
             itemDict[itemString] = json.items[0].link
@@ -91,8 +91,9 @@ const NameForm = () => {
     const configuration = new Configuration({
 
         organization: "org-bc7fCUYhKAertCqdDbhen40D",
-
-        apiKey: "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",
+        
+        // new open ai keys are found at https://platform.openai.com/account/api-keys
+        apiKey: "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",
 
     });
 
