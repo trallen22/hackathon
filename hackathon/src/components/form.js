@@ -45,6 +45,7 @@ const NameForm = () => {
     for (let i = 0; i < split.length; i++) {
         let itemString = split[i]
         const res = await fetch( 
+            // New keys start after "key=" and end at "&cx"
             `https://www.googleapis.com/customsearch/v1?key=AIzaSyDIFxMHr-uy0hBRehEWZPdcNFq2pyYvpeA&cx=f0aec48937b8f4a5a&q=${itemString}`
           );
           const json = await res.json();
