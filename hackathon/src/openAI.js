@@ -5,7 +5,7 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
-async function callApi() {
+export async function callApi() {
     const response = await openai.createCompletion({
         model: "text-davinci-003",
         prompt: "tell me a short story in 100 words",
@@ -15,5 +15,3 @@ async function callApi() {
       });
     console.log(response.data.choices[0].text)
 }
-
-callApi()
