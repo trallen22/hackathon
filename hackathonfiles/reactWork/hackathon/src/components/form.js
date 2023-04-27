@@ -45,7 +45,7 @@ const NameForm = () => {
     for (let i = 0; i < split.length; i++) {
         let itemString = split[i]
         const res = await fetch(
-            `https://www.googleapis.com/customsearch/v1?key=AIzaSyCbjpfGKScSURcaUJPe_ud6drieZFKBbPo&cx=f0aec48937b8f4a5a&q=${itemString}`
+            // `https://www.googleapis.com/customsearch/v1?key=AIzaSyCbjpfGKScSURcaUJPe_ud6drieZFKBbPo&cx=f0aec48937b8f4a5a&q=${itemString}`
           );
           const json = await res.json();
             itemDict[itemString] = json.items[0].link
@@ -94,7 +94,7 @@ const NameForm = () => {
 
         organization: "org-LCH831EKRQfTemslq6pe8Gmh",
 
-        apiKey: "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",
+        // apiKey: "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",
 
     });
 
@@ -134,7 +134,7 @@ const NameForm = () => {
       //setLoading(true);
       // THIS GOOGLE KEY IS WHERE WE GO SO IF THINGS STOP WORKING
       const res = await fetch(
-        `https://www.googleapis.com/customsearch/v1?key=AIzaSyCbjpfGKScSURcaUJPe_ud6drieZFKBbPo&cx=d2e35566790364c73&q=${query}`
+        // `https://www.googleapis.com/customsearch/v1?key=AIzaSyCbjpfGKScSURcaUJPe_ud6drieZFKBbPo&cx=d2e35566790364c73&q=${query}`
       );
       const json = await res.json();
       setData(json.items);
