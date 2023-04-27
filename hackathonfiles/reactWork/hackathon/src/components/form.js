@@ -39,9 +39,9 @@ const NameForm = () => {
     const text = response.data.choices[0].text
     let split = text.split(",")
     console.log(split)
-
+     // insert new key from = to cx (include &)
     var itemDict = {}
-    var googleapikey= a;
+    // var googleapikey= a;
     for (let i = 0; i < split.length; i++) {
         let itemString = split[i]
         const res = await fetch(
@@ -50,6 +50,7 @@ const NameForm = () => {
           const json = await res.json();
             itemDict[itemString] = json.items[0].link
        }
+       console.log("yaaaaaaa")
    
     setDict(itemDict)
 
@@ -72,6 +73,7 @@ const NameForm = () => {
     console.log("aaaaaaaaaaaaaaaaaaa")
     console.log(text)
 
+    // dsparks gpt key : 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
 
     // call google api with the result from gpt3
     fetchData(text)
@@ -90,9 +92,9 @@ const NameForm = () => {
 
     const configuration = new Configuration({
 
-        organization: "org-bc7fCUYhKAertCqdDbhen40D",
+        organization: "org-LCH831EKRQfTemslq6pe8Gmh",
 
-        apiKey: "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",
+        apiKey: "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",
 
     });
 
@@ -127,14 +129,12 @@ const NameForm = () => {
 
 
 
-
-
     ////////////Google API /////////////////////////////////////////////////
   const fetchData = async (query) => {
       //setLoading(true);
       // THIS GOOGLE KEY IS WHERE WE GO SO IF THINGS STOP WORKING
       const res = await fetch(
-        `https://www.googleapis.com/customsearch/v1?key=AIzaSyD8eYDHtyu6Wp7eDlb1bJUlS0JdojD4WQo&cx=d2e35566790364c73&q=${query}`
+        `https://www.googleapis.com/customsearch/v1?key=AIzaSyCbjpfGKScSURcaUJPe_ud6drieZFKBbPo&cx=d2e35566790364c73&q=${query}`
       );
       const json = await res.json();
       setData(json.items);
